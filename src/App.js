@@ -15,23 +15,24 @@ function App() {
   const [favorite, setFavorite] = React.useState([])
   const [searchValue, setSearchValue] = React.useState('')
   const [cartOpened, setCartOpened] = React.useState(false)
+  console.log(setItems);
+  console.log(items);
 
-React.useEffect(() => {
- async function fetchData(){
-   const cartRespons = await axios.get('https://627500465dc4f5764b9ccafb.mockapi.io/cart');
-   const favoritesRespons = await axios.get('https://627500465dc4f5764b9ccafb.mockapi.io/favorit');
-   const itemsRespons = await axios.get('https://627500465dc4f5764b9ccafb.mockapi.io/items');
+  React.useEffect(() => {
+    async function fetchData() {
+      const cartRespons = await axios.get('https://627500465dc4f5764b9ccafb.mockapi.io/cart');
+      const favoritesRespons = await axios.get('https://627500465dc4f5764b9ccafb.mockapi.io/favorit');
+      const itemsRespons = await axios.get('https://627500465dc4f5764b9ccafb.mockapi.io/items');
 
-  setItems(itemsRespons.data);
-  setCartItems(cartRespons.data);
-  setFavorite(favoritesRespons.data);
- }
+      setItems(itemsRespons.data);
+      setCartItems(cartRespons.data);
+      setFavorite(favoritesRespons.data);
+    }
 
- fetchData()
-},[])
+    fetchData()
+  }, [])
 
 const onAddToCart = (obj) => {
-  // try{
     if(cartItems.find((item)=> Number(item.id) === Number(obj.id))){
       axios.delete(`https://627500465dc4f5764b9ccafb.mockapi.io/cart${obj.id}`)
       setCartItems(prev => prev.filter(item => Number(item.id) !== Number(obj.id)));
@@ -39,9 +40,6 @@ const onAddToCart = (obj) => {
       axios.post('https://627500465dc4f5764b9ccafb.mockapi.io/cart', obj);
       setCartItems(prev =>[...prev, obj]);
     }
-  // }catch(error){
-
-  // }
 }
 
 const onPemoveItem = (id) => {
