@@ -7,7 +7,7 @@ import ContentLoader from 'react-content-loader';
 
 function Card({ 
     id, 
-    onFevorite, 
+    onFavorite, 
     title, 
     imageUrl, 
     price, 
@@ -23,8 +23,8 @@ const onClickPlus = () => {
     setIsAdded(!isAdded);
 }
 
-const onClickFevorite = () => {
-    onFevorite({id, title, imageUrl, price})
+const onClickFevorite = async () => {
+    onFavorite({id, title, imageUrl, price})
     setIsFavorite(!isFavorite)
 }
 
@@ -53,7 +53,7 @@ const onClickFevorite = () => {
                 </ContentLoader>
             ) : (
                 <>
-                <div className="fevorite" onClick={onClickFevorite}>
+                <div className="fevorite" onClick={() => onClickFevorite()}>
                 <img src={isFavorite ? '/img/liked.svg' : '/img/unliked.svg' } alt="Unliked" />
             </div>
 

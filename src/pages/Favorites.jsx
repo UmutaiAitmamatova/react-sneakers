@@ -13,7 +13,7 @@ function Favorites({items, onAddToFavorite}) {
                         <Card
                             key={index}
                             favorited={true}
-                            onFevorite={onAddToFavorite}
+                            onFavorite={onAddToFavorite}
                             {...item}
                         />
                     ))}
