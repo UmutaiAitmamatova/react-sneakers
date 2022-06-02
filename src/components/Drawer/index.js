@@ -3,8 +3,8 @@ import axios from 'axios'
 import Info from '../info'
 
 import { useCart } from '../../hooks/useCart'
-import styles from '../Drawer'
-// import styles from './Drawer.module.scss'
+// import styles from '../Drawer'
+import styles from './Drawer.module.scss'
 
 
 // import AppContext from '../context'
@@ -45,7 +45,7 @@ function Driwer({ onClose, onRemove, items = [], opened }) {
 
 
     return (
-        <div className={`${styles.overlay} ${opened ? styles.overlay: ''}`}>
+        <div className={`${styles.overlay} ${opened ? styles.overlayVisible : ''}`}>
             <div className={styles.drawer}>
                 <h2 className="d-flex justify-between mb-30">Корзина
                     <img onClick={onClose} className="removeBtn cu-p" src="/img/btn-remove.svg" alt="Remove" />

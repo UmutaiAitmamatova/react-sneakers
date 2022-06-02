@@ -116,8 +116,9 @@ return (
 
     <div className="wrapper clear">
 
-    <Drawer items={cartItems} onClose={() => setCartOpened(false)} onRemove={onPemoveItem} opened={cartOpened}/>
-      {/* {cartOpened && <Drawer items={cartItems} onClose={() => setCartOpened(false)} onRemove={onPemoveItem} opened={cartOpened} />} */}
+    {/* <Drawer items={cartItems} onClose={() => setCartOpened(false)} onRemove={onPemoveItem} opened={cartOpened}/> */}
+      {cartOpened && <Drawer items={cartItems} onClose={() => setCartOpened(true)} onRemove={onPemoveItem} opened={cartOpened} />}
+      
       <Header onClickCart={() => setCartOpened(false)} />
 
       <Routes>
