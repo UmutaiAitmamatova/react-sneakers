@@ -3,24 +3,15 @@ import axios from 'axios'
 import Info from '../info'
 
 import { useCart } from '../../hooks/useCart'
-// import styles from '../Drawer'
 import styles from './Drawer.module.scss'
-
-
-// import AppContext from '../context'
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-
 function Driwer({ onClose, onRemove, items = [], opened }) {
     const { cartItems, setCartItems, totalPrice} = useCart()
-    // const { cartItems, setCartItems } = React.useContext(AppContext);
     const [isOrderComplete, setIsOrderComplete] = React.useState(false);
     const [isLoading, setIsLoading] = React.useState(false);
     const [orderId, setOrderId] = React.useState(null);
-
-    // const totalPrice = cartItems.reduce((sum, obj) => obj.price + sum, 0)
-
 
     const onClickOrder = async () => {
         try {
@@ -42,7 +33,6 @@ function Driwer({ onClose, onRemove, items = [], opened }) {
         }
         setIsLoading(false);
     };
-
 
     return (
         <div className={`${styles.overlay} ${opened ? styles.overlayVisible : ''}`}>
