@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/UnutNini/react-sneakers/static/css/main.628eee72.css",
+    "main.js": "/UnutNini/react-sneakers/static/js/main.a9e32ac7.js",
+    "index.html": "/UnutNini/react-sneakers/index.html",
+    "main.628eee72.css.map": "/UnutNini/react-sneakers/static/css/main.628eee72.css.map",
+    "main.a9e32ac7.js.map": "/UnutNini/react-sneakers/static/js/main.a9e32ac7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.628eee72.css",
+    "static/js/main.a9e32ac7.js"
+  ]
+}
