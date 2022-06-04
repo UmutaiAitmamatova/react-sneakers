@@ -8,6 +8,7 @@
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
+    "build": "^0.1.4",
     "gh-pages": "^4.0.0",
     "macro-css": "^1.0.5",
     "node-sass": "^7.0.1",

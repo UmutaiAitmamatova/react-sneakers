@@ -117,7 +117,7 @@ return (
       <Header onClickCart={() => setCartOpened(true)} />
 
       <Routes>
-        <Route path='/' element={
+        <Route path='' element={
           <Home
             items={items}
             cartItems={cartItems}
@@ -130,9 +130,9 @@ return (
           />
 
         } />
-        <Route path='/favorit' element={<Favorites onAddToFavorite={onAddToFavorite} />} />
+        <Route path='favorit' element={<Favorites onAddToFavorite={onAddToFavorite} />} />
 
-        <Route path='/orders' element={<Orders onAddToFavorite={onAddToFavorite} />} />
+        <Route path='orders' element={<Orders onAddToFavorite={onAddToFavorite} />} />
 
       </Routes>
 
